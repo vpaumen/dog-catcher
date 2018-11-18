@@ -11,7 +11,7 @@ function bindButtons(){
     var url = 'http://api.petfinder.com/pet.find';
     
 // Please check the code, particularly variables! - Kirsten
-var apiKey = ''; // FIND JAMES' KEY VARIABLE AND INSERT
+var apiKey = 'api_key'; // FIND JAMES' KEY VARIABLE AND INSERT
 
 // the next line and function set up the button in our html to be clickable and reactive -Kirsten
 document.addEventListener('DOMContentLoaded', bindButtons);
@@ -171,4 +171,4 @@ var handleDeleteBtnClick = function() {
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);*/
+$exampleList.on("click", ".delete", handleDeleteBtnClick);
