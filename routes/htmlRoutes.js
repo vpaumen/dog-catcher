@@ -1,6 +1,22 @@
 var db = require("../models");
 
 module.exports = function(app) {
+  app.get("/users", function(req, res) {
+    res.render("users");
+  });
+
+  app.get("/faq", function(req, res) {
+    res.render("faq");
+  });
+
+  app.get("/index", function(req, res) {
+    res.render("index");
+  });
+
+  app.get("/results", function(req, res) {
+    res.render("results");
+  });
+
   // Load index page
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
