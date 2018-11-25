@@ -1,117 +1,110 @@
 <div id="home">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/users">Log In/Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="/results">Search/Saved Results</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="/faq">FAQ</a>
-                          </li>
-                </div>
-              </nav>
+  {{!-- NAV BAR AO--}}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users">Log In/Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/results">Search/Saved Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+          </li>
+      </div>
+  </nav>
+  {{!-- Jumbotron, contains title and dog image AO --}}
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Dog Catcher</h1>
-
- <div class="container">
-		<div class="dog">
-			<div class="dog-head">
-				<div class="dog-ears ears-left"></div>
-				<div class="dog-ears ears-right"></div>
-				<div class="dog-eyes"></div>
-				<div class="dog-mouth">
-					<div class="dog-nose"></div>
-					<div class="dog-tongue"></div>
-				</div>
-			</div>
-			<div class="dog-tail"></div>
-			<div class="dog-body">
-				<div class="dog-foot"></div>
-			</div>
-			<div class="ball"></div>
-		</div>
-	</div>
-
-        </div>
+      {{!-- dog image elements AO--}}
+        <div class="container">
+		      <div class="dog">
+			      <div class="dog-head">
+				    <div class="dog-ears ears-left"></div>
+				    <div class="dog-ears ears-right"></div>
+				    <div class="dog-eyes"></div>
+				    <div class="dog-mouth">
+				    <div class="dog-nose"></div>
+				    <div class="dog-tongue"></div>
+			    </div>
+		    </div>
+			      <div class="dog-tail"></div>
+			      <div class="dog-body">
+			      <div class="dog-foot"></div>
+		      </div>
+			  <div class="ball"></div>
+		  </div>
+	  </div>
+  </div>
  </div>
-
-    {{!-- Search forms --}}
-    
-    <form>
+    {{!-- Search forms AO--}}
+    {{!-- Quick Search for Zip Code, element id=Submit Zip AO--}}
+  <form>
     <div class="form-group">
-    {{!-- <legend> Bring your leash? Catch! </legend> --}}
-    <h5>Quick Search</h5>
-    <input type="text" class="form-control" placeholder="Zip Code">
-    {{!-- <br> --}}
-    {{!-- <input type="submit" id="submitZip"> --}}
-    <button type="submit" class="btn btn-primary">Submit</button>
+      <legend> Bring your leash? Catch! </legend>
+      <h5>Quick Search</h5>
+      <input type="text" class="form-control" id="SubmitZip" placeholder="Zip Code">
+      <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-
-  
-{{!-- hidden advanced search --}}
-<div class="form-group">
-<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Advanced Search</button>
-  <div id="demo" class="collapse">
-<form>
+{{!-- hidden advanced search, element ids are = SubmitZip, SearchInputSize, SearchInputSex, SearchInputAge, SearchInputBreed AO--}}
   <div class="form-group">
-    <h5>Advanced Search</h5>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Advanced Search</button>
+    <div id="demo" class="collapse">
+      <form>
+        <div class="form-group">
+        <h5>Advanced Search</h5>
+          <label for="exampleFormControlSelect1">Zip Code</label>
+          <input type="text" class="form-control" id="SubmitZip">
 
-    <label for="exampleFormControlSelect1">Zip Code</label>
-    <input type="text" class="form-control">
+          <label for="exampleFormControlSelect1">Size</label>
+          <select class="form-control" id="SearchInputSize">
+            <option></option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>Extra Large</option>
+          </select>
 
-    <label for="exampleFormControlSelect1">Size</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      
-      <option></option>
-      <option>Small</option>
-      <option>Medium</option>
-      <option>Large</option>
-      <option>Extra Large</option>
-    </select>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Sex</label>
+          <select class="form-control" id="SearchInputSex">
+            <option></option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Age</label>
+          <select class="form-control" id="SearchInputAge">
+            <option></option>
+            <option>Baby</option>
+            <option>Young</option>
+            <option>Adult</option>
+            <option>Senior</option>
+          </select>
+
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Breed</label>
+          <select multiple class="form-control" id="SearchInputBreed">
+            <option>Any breed!</option>
+            <option>Maltese</option>
+            <option>German Shepherd</option>
+            <option>Pug</option>
+            <option>Golden Retriever</option>
+          </select>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
   </div>
-    <div class="form-group">
-    <label for="exampleFormControlSelect1">Sex</label>
-    <select class="form-control" id="exampleFormControlSelect2">
-      <option></option>
-      <option>Male</option>
-      <option>Female</option>
-    </select>
-  </div>
-    <div class="form-group">
-    <label for="exampleFormControlSelect1">Age</label>
-    <select class="form-control" id="exampleFormControlSelect3">
-      <option></option>
-      <option>Baby</option>
-      <option>Young</option>
-      <option>Adult</option>
-      <option>Senior</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Breed</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>Any breed!</option>
-      <option>Maltese</option>
-      <option>German Shepherd</option>
-      <option>Pug</option>
-      <option>Golden Retriever</option>
-    </select>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>

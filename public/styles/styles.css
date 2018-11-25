@@ -279,6 +279,15 @@ body {
   border-radius: 10px 0 0 0px / 50px 0 0 0px;
 	animation: tail .08s infinite alternate;
 }
+
+@keyframes ball {
+  0% {
+  	right: 10px;
+	}
+	10% {
+  	right: 20px;
+  }
+} 
 .ball {
 	width: 30px;
 	height: 30px;
@@ -286,6 +295,9 @@ body {
 	bottom: 0;
 	right: 0px;
 	border-radius: 50%;
-	background-color: #6E64F0;
+  background-color: #6E64F0;
+  animation: ball 4s linear infinite;
 }
+
+
 
