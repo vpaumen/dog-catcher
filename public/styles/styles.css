@@ -9,7 +9,10 @@
 .dropdown {
   position: static;
 }
-
+.login-signup {
+  margin: auto;
+  width: 700px;
+}
 button {
   margin-top: 10px;
   margin-bottom: 15px;
@@ -39,23 +42,26 @@ body {
   margin-left: 0px;
   /* color: #6e65f0; */
   color: #45444a;
+  /* width: 50%;
+  height: 50%; */
 }
 
 .container {
 	width: 100%;
-	/* height: 100%; */
+	height: 100%;
 	display: flex;
 	justify-content: left;
   align-items: center;
-  margin-right: 0;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .dog {
 	width: 160px;
 	height: 186px;
   position: relative;
-  margin: 10px 10px 10px 10px;
-  padding-right: 25px;
+  margin: 10px 10px 10px 300px;
+  /* padding-right: 25px; */
 }
 @keyframes head {
 	0% {
@@ -280,14 +286,14 @@ body {
 	animation: tail .08s infinite alternate;
 }
 
-@keyframes ball {
+/* @keyframes ball {
   0% {
   	right: 10px;
 	}
 	10% {
   	right: 20px;
   }
-} 
+}  */
 .ball {
 	width: 30px;
 	height: 30px;
