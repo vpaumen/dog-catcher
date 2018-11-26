@@ -1,0 +1,64 @@
+<div id="users">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users">Log In/Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/results">Search/Saved Results</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+      </div>
+    </nav>
+      {{!-- Jumbotron, contains title and dog image AO --}}
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Dog Catcher</h1>
+      {{!-- dog image elements AO--}}
+        <div class="container2">
+		      <div class="dog">
+			      <div class="dog-head">
+				    <div class="dog-ears ears-left"></div>
+				    <div class="dog-ears ears-right"></div>
+				    <div class="dog-eyes"></div>
+				    <div class="dog-mouth">
+				    <div class="dog-nose"></div>
+				    <div class="dog-tongue"></div>
+			    </div>
+		    </div>
+			      <div class="dog-tail"></div>
+			      <div class="dog-body">
+			      <div class="dog-foot"></div>
+		      </div>
+			  <div class="ball"></div>
+		  </div>
+	  </div>
+  </div>
+ </div>
+    <form>
+      <div class="login-signup">
+        {{!-- <div class="form-group"></div> --}}
+          <label for="exampleInputEmail1">eMail</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        {{!-- </div> --}}
+        {{!-- <div class="form-group"> --}}
+          <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        {{!-- </div> --}}
+      </div>
+    </form>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
