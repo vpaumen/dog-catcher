@@ -28,4 +28,43 @@
   {{{body}}}
 
 </body>
+
+<script>
+var apiKey = '183129c808bcae5ded4b21a86b0a1ddc'; // assign our key to a variable, easier to read
+
+// Petfinder API - breed.list call to populate Breeds dropdown
+document.addEventListener('DOMContentLoaded', getBreeds);
+
+function getBreeds() {
+
+    var url = 'https://api.petfinder.com/breed.list'
+
+    $.ajax({
+        url: url,
+        jsonp: "callback",
+        dataType: "jsonp",
+        data: {
+            key: apiKey,
+            animal: 'dog',
+            format: 'json'
+        },
+        // Here is where we handle the response we got back from Petfinder
+        success: function( response ) {
+            console.log(response); // debugging
+
+            console.log(response.petfinder.breeds.breed.length);
+
+            for (var i = 0; i < response.petfinder.breeds.breed.length; i++) { 
+
+                var newBreed = $("<option>");
+                newBreed.attr("value", response.petfinder.breeds.breed[i].$t);
+                newBreed.text(response.petfinder.breeds.breed[i].$t);
+                $("#breeds-drop").append(newBreed);
+            }
+    
+        }
+    });
+}
+
+</script>
 </html>
