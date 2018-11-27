@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
       required: true
     },
     email: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.STRING,
       required: true
     }
   });

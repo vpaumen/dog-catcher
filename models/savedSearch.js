@@ -2,6 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   var SavedSearch = sequelize.define("SavedSearch", {
     id: {
       type: DataTypes.INTEGER,
+      primaryKey: true,
       allowNull: false
     },
     dogSex: {
