@@ -1,7 +1,7 @@
 var Sequelize = require("sequelize");
 
-var sequelize = new Sequelize("sequelize_dogcatcher", "root", "", {
-  host: "localhost",
+var sequelize = new Sequelize("sequelize_dogcatcher", "tester1", "apple20", {
+  host: "thepaumens.com",
   port: 3306,
   dialect: "mysql",
   pool: {
