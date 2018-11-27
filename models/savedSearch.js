@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var savedSearch = sequelize.define("saved_search", {
+  var SavedSearch = sequelize.define("SavedSearch", {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false
@@ -26,13 +26,13 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  savedSearch.associate = function(models) {
-    savedSearch.belongsTo(models.users, {
+  SavedSearch.associate = function(models) {
+    SavedSearch.belongsTo(models.Users, {
       foreignKey: {
         allowNull: false
       }
     });
   };
 
-  return savedSearch;
+  return SavedSearch;
 };
