@@ -23,9 +23,14 @@
   {{!-- Jumbotron, contains title and dog image AO --}}
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">Dog Catcher</h1>
+      <div class="row">
+        <div class="col-lg-8">
+      <h1 class="display-6">Dog Catcher</h1>
+      </div>
+      </div>
       {{!-- dog image elements AO--}}
         <div class="container2">
+          <div class="row">
 		      <div class="dog">
 			      <div class="dog-head">
 				    <div class="dog-ears ears-left"></div>
@@ -45,66 +50,94 @@
 	  </div>
   </div>
  </div>
+ </div>
+
     {{!-- Search forms AO--}}
     {{!-- Quick Search for Zip Code, element id=Submit Zip AO--}}
-  <form>
+  
+    
+      <h2>Let's Play Catch!</h2>
+      <form>
     <div class="form-group">
-      <legend> Bring your leash? Catch! </legend>
-      <h5>Quick Search</h5>
+        <div class="row">
+        <div class="col-lg-12 col-md-6 col-sm-2">
+      <h5>Quick search for a dog near you</h5>
       <input type="text" class="form-control" id="SubmitZip" placeholder="Zip Code">
       <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      </div>
   </form>
+  
 {{!-- hidden advanced search, element ids are = SubmitZip, SearchInputSize, SearchInputSex, SearchInputAge, SearchInputBreed AO--}}
-  <div class="form-group">
-    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Advanced Search</button>
-    <div id="demo" class="collapse">
-      <form>
-        <div class="form-group">
-        <h5>Advanced Search</h5>
-          <label for="exampleFormControlSelect1">Zip Code</label>
-          <input type="text" class="form-control" id="SubmitZip">
+  <div class="form-group2">
+    <div class="row">
+      <div class="col-lg-12 col-md-6 col-sm-2">
+      <br>
+        <h5>Advanced search to locate your Perfect Match</h5>
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Advanced Search</button>
+      <div id="demo" class="collapse">
+        <form>
 
-          <label for="exampleFormControlSelect1">Size</label>
-          <select class="form-control" id="SearchInputSize">
-            <option></option>
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
-            <option>Extra Large</option>
-          </select>
+          <div class="form-group">
+        {{!-- <h5>Advanced Search</h5> --}}
+          {{!-- <label for="exampleFormControlSelect1">Zip Code</label> --}}
+            <input type="text" class="form-control" id="SubmitZip" placeholder="Zip Code">
+          <div id="breeds">
+            <select id="breeds-drop" class="custom-select">
+              <option selected value="">Select a Breed</option>
+            </select>
+          </div>
 
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Sex</label>
-          <select class="form-control" id="SearchInputSex">
-            <option></option>
-            <option>Male</option>
-            <option>Female</option>
-          </select>
+          <label for="SearchInputSize"><h6>Size</h6></label>
+            <select class="form-control" id="SearchInputSize">
+              <option></option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+              <option>Extra Large</option>
+            </select>
+          </div>
 
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Age</label>
-          <select class="form-control" id="SearchInputAge">
-            <option></option>
-            <option>Baby</option>
-            <option>Young</option>
-            <option>Adult</option>
-            <option>Senior</option>
-          </select>
+          <div class="form-group">
+            <label for="SearchInputSex"><h6>Sex</h6></label>
+              <select class="form-control" id="SearchInputSex">
+                <option></option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
 
-        <div class="form-group">
-          <label for="exampleFormControlSelect2">Breed</label>
-          <select multiple class="form-control" id="SearchInputBreed">
-            <option>Any breed!</option>
-            <option>Maltese</option>
-            <option>German Shepherd</option>
-            <option>Pug</option>
-            <option>Golden Retriever</option>
-          </select>
+          <div class="form-group">
+            <label for="SearchInputAge"><h6>Age</h6></label>
+              <select class="form-control" id="SearchInputAge">
+              <option></option>
+              <option>Baby</option>
+              <option>Young</option>
+              <option>Adult</option>
+              <option>Senior</option>
+            </select>
+          </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
   </div>
+  </div>
+  </div>
+
+  {{!-- attempt at adding search results in handlebars --}}
+  <section id="results-container">
+    <div id="results">
+      {{!-- <h2>Your Matches!</h2> --}}
+      {{#each dog}}
+      <div class="dog">
+        <form class="results-form" action="/{{id}}?_method=PUT" method="POST">
+        </form>
+        {{dog_name}} <span>#{{id}}</span>
+      </div>
+      {{/each}}
+    </div>
+    </section>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>

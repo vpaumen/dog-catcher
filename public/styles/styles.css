@@ -1,9 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Paytone+One');
 /* font-family: 'Paytone One', sans-serif; */
 
+.jumbotron {
+  border-bottom: 5px solid #28a745;
+}
+
+nav {
+  color: rgb(53, 60, 73);
+}
 .form-group {
   margin: auto;
   width: 700px;
+}
+
+.custom-select {
+  color: #495057 !important;
+  margin-top: 10px;
+}
+
+h2 {
+  text-align: center;
+  width: auto;
+  font-family: 'Paytone One', sans-serif;
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: #28a745;
+}
+
+h5 {
+  color: gray;
+}
+
+h6 {
+  color: gray;
+  margin-bottom: 2px;
+  margin-top: 20px;
 }
 
 .dropdown {
@@ -16,52 +47,55 @@
 button {
   margin-top: 10px;
   margin-bottom: 15px;
-  background-color: #6E64F0 !important;
+  background-color: whitesmoke !important;
+  border: none !important;
+  color: #020253 !important;
 }
 
-/* * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-} */
+button:hover {
+  cursor: pointer;
+  background-color: #f4a4ad !important;
+  transition-duration: 001s !important;
+}
+
 body {
-	width: 100%;
-  height: 100%;
-  /* background-color: #ebebf4; */
+  background-color: rgb(53, 60, 73);
 }
 
 .jumbotron {
   padding: 10px 0 10px 0;
-  background-color: #ebebf4;
+  background-color: #020253;
 }
 
-.display-4 {
-  align-content: left;
+.display-6 {
+  align-content: center;
+  justify-content: left;
   font-family: 'Paytone One', sans-serif;
   font-size: 90px;
   margin-left: 0px;
-  /* color: #6e65f0; */
-  color: #45444a;
-  /* width: 50%;
-  height: 50%; */
+  color: whitesmoke;
+  margin-right: 50px;
+  padding-right: 200px;
+  width: 75%;
 }
+ 
 
 .container {
 	width: 100%;
 	height: 100%;
 	display: flex;
-	justify-content: left;
-  align-items: center;
-  margin-right: 10px;
-  margin-left: 10px;
+	/* justify-content: left;
+  align-items: center; */
+  /* margin-right: 100px;
+  margin-left: 10px; */
 }
 
 .dog {
 	width: 160px;
 	height: 186px;
   position: relative;
-  margin: 10px 10px 10px 300px;
-  /* padding-right: 25px; */
+  max-width: 100%;
+  /* margin: 10px 10px 10px 300px; */
 }
 @keyframes head {
 	0% {
