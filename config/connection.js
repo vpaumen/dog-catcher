@@ -1,5 +1,5 @@
-var Sequelize = require("sequelize");
-
+var sequelize = require("sequelize");
+// on line 3 victor changed var Sequelize to sequelize(lowercase)
 var sequelize = new Sequelize("sequelize_dogcatcher", "tester1", "apple20", {
   host: "thepaumens.com",
   port: 3306,
