@@ -1,11 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
-  var Favorites = sequelize.define("favorites", {
+  var Favorites = sequelize.define("Favorites", {
     id: {
       type: DataTypes.INTEGER,
+      primaryKey: true,
       allowNull: false
     },
     dogid: {
-      type: DataTypes.VARCHAR,
+      type: DataTypes.INTEGER,
       required: true
     },
     dogName: {
@@ -14,8 +15,8 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  favorites.associate = function(models) {
-    favorites.belongsTo(models.users, {
+  Favorites.associate = function(models) {
+    Favorites.belongsTo(models.Users, {
       foreignKey: {
         allowNull: false
       }
