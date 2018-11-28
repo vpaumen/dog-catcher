@@ -37,15 +37,15 @@ var age = '';
 var apiKey = '183129c808bcae5ded4b21a86b0a1ddc'; // assign our key to a variable, easier to read
 
 // Petfinder API - breed.list call to populate Breeds dropdown
-/* document.addEventListener('DOMContentLoaded', getBreeds); */
+document.addEventListener('DOMContentLoaded', getBreeds);
 
 // the next line and function set up the button in our html to be clickable and reactive 
 document.addEventListener('DOMContentLoaded', bindButtons);
 
 function bindButtons(){
-	document.getElementById('submitZip').addEventListener('click', function(event){
+	document.getElementById('SubmitZip').addEventListener('click', function(event){
 		event.preventDefault();
-		var zip = document.getElementById('zip').value; // this line gets the zip code from the form entry
+		var zip = document.getElementById('InputZip').value; // this line gets the zip code from the form entry
         /* var url = 'https://api.petfinder.com/pet.getRandom'; */
         var url = 'https://api.petfinder.com/pet.find';
         /* var url = 'https://api.petfinder.com/breed.list'; */

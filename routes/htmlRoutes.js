@@ -9,7 +9,7 @@ module.exports = function(app) {
     res.render("faq");
   });
 
-  app.get("/index", function(req, res) {
+  app.get("/", function(req, res) {
     res.render("index");
   });
 
@@ -18,14 +18,14 @@ module.exports = function(app) {
   });
 
   // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
-  });
+  // app.get("/", function(req, res) {
+  //   db.Example.findAll({}).then(function(dbExamples) {
+  //     res.render("index", {
+  //       msg: "Welcome!",
+  //       examples: dbExamples
+  //     });
+  //   });
+  // });
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {

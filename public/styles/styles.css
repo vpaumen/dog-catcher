@@ -2,7 +2,8 @@
 /* font-family: 'Paytone One', sans-serif; */
 
 .jumbotron {
-  border-bottom: 5px solid #28a745;
+  border-bottom: 5px inset #28a745;
+  height: 250px;
 }
 
 nav {
@@ -17,6 +18,12 @@ nav {
   color: #495057 !important;
   margin-top: 10px;
 }
+
+h1 {
+  padding-top: 30px;
+  margin-right: 100px;
+}
+
 
 h2 {
   text-align: center;
@@ -37,6 +44,22 @@ h6 {
   margin-top: 20px;
 }
 
+.fa-paw {
+  margin-right: 10px;
+  color: whitesmoke;
+}
+
+li {
+  color: #efe4ce;
+}
+
+ul {
+  padding-left: 30px;
+  color: gray;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
 .dropdown {
   position: static;
 }
@@ -47,15 +70,17 @@ h6 {
 button {
   margin-top: 10px;
   margin-bottom: 15px;
-  background-color: whitesmoke !important;
+  color: whitesmoke !important;
   border: none !important;
-  color: #020253 !important;
+  background-color: #28a745 !important;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #f4a4ad !important;
-  transition-duration: 001s !important;
+  background-color: #8beca1 !important;
+  transition-duration: 0001s !important;
+  color:  rgb(53, 60, 73) !important;
+  transition-duration: 0001s !important;
 }
 
 body {
@@ -68,15 +93,16 @@ body {
 }
 
 .display-6 {
-  align-content: center;
+  /* align-content: center; */
   justify-content: left;
   font-family: 'Paytone One', sans-serif;
-  font-size: 90px;
+  font-size: 120px;
   margin-left: 0px;
   color: whitesmoke;
-  margin-right: 50px;
-  padding-right: 200px;
   width: 75%;
+  /* margin-right: 50px;
+  padding-right: 200px; */
+  width: 800px;
 }
  
 
@@ -84,10 +110,10 @@ body {
 	width: 100%;
 	height: 100%;
 	display: flex;
-	/* justify-content: left;
-  align-items: center; */
-  /* margin-right: 100px;
-  margin-left: 10px; */
+  align-items: center;
+}
+
+.list-unstyled {
 }
 
 .dog {
