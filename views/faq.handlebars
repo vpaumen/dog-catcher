@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/users">Log In/Sign Up</a>
@@ -19,11 +19,60 @@
         </li>
       </div>
     </nav>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Questions?</h1>
+     {{!-- Jumbotron, contains title and dog image AO --}}
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+      <h1 class="display-6">Dog Catcher</h1>
       </div>
-    </div>
+      </div>
+      {{!-- dog image elements AO--}}
+        <div class="container2">
+          <div class="row">
+		      <div class="dog">
+			      <div class="dog-head">
+				    <div class="dog-ears ears-left"></div>
+				    <div class="dog-ears ears-right"></div>
+				    <div class="dog-eyes"></div>
+				    <div class="dog-mouth">
+				    <div class="dog-nose"></div>
+				    <div class="dog-tongue"></div>
+			    </div>
+		    </div>
+			      <div class="dog-tail"></div>
+			      <div class="dog-body">
+			      <div class="dog-foot"></div>
+		      </div>
+			  <div class="ball"></div>
+		  </div>
+	  </div>
+  </div>
+ </div>
+ </div>
+ <h2>FAQ</h2>
+
+<div class="container">
+ <ul class="list-unstyled">
+  <li><span class="fas fa-paw"></span>HOW DO I FIND MORE INFORMATION ABOUT A DOG</li>
+    <ul>Please click the link provided for each animal to take you to the dog’s rescue organization. All information available we be provided by the adoption agency itself.</ul>
+  <li><span class="fas fa-paw"></span>HOW DO I ADOPT A DOG</li>
+    <ul>Please click the link provided for each animal to take you to the dog’s rescue organization. Each organization has its own adoption procedure.  Staff members will be able to provide guidance and ensure that you have completed all necessary steps to bring your new family member home!</ul>
+  <li><span class="fas fa-paw"></span>HOW DO I CHANGE A SAVED SEARCH</li>
+    <ul>Select the Saved Search tab to change your search parameters at any time. Click Save to run the new search. This will remain your default search until you make and save another change.</ul>
+  <li><span class="fas fa-paw"></span>DO YOU SUPPORT SEARCHES FOR OTHER ANIMALS LIKE CATS</li>
+    <ul>No, we only search for dogs. Woof.</ul>
+  <li><span class="fas fa-paw"></span>A DOG I SAW IN A PREVIOUS SEARCH IS NO LONGER DISPLAYED</li>
+    <ul>Unfortunately, this means the status of the dog has changed and it is no longer adoptable.</ul>
+  <li><span class="fas fa-paw"></span>WHEN I CHECK MY FAVORITES NOT ALL MY SAVED DOGS ARE DISPLAYED</li>
+    <ul>Your list of saved favorites will change if one or more of the dogs are no longer available. We recommend contacting the pet adoption agency or shelter as quickly as possible. Most will place a dog’s status as “pending” so that no one else can adopt your new best friend while you work out logistics.</ul>
+  <li><span class="fas fa-paw"></span>WHY DO MY RESULTS SHOW BREEDS OTHER THAN THE ONE I SELECTED</li>
+    <ul>Dog-Catcher will display exact breed matches as well as any mixed-breeds that contain your search choice.</ul>
+  <li><span class="fas fa-paw"></span>HOW ACCURATE ARE THE BREED LISTINGS</li>
+    <ul>Rescue organizations and shelters have limited access to pet breed documentation if any. In most cases the breeds listed are educated guesses from veterinarians and personnel who work with the adoptable dogs and are meant as guidelines.</ul>
+  <li><span class="fas fa-paw"></span>ARE THE DOGS SPAYED OR NEUTERED</li>
+    <ul>This will be noted in the information provided by the rescue organization which is hosting your dog-to-be. Please follow the link to the site itself.</ul>
+</div>
     
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
