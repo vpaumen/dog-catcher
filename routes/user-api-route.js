@@ -1,20 +1,12 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/api/users", function(req, res) {
-    db.Users.findAll({
-      include: [db.savedSearch, db.favorites]
-    }).then(function(dbUsers) {
-      res.json(dbUsers);
-    });
-  });
-
   app.get("/api/users/:id", function(req, res) {
     db.Users.findOne({
       where: {
         id: req.params.id
       },
-      include: [db.savedSearch, db.favorites]
+      include: [db.SavedSearch, db.Favorites]
     }).then(function(dbUsers) {
       res.json(dbUsers);
     });

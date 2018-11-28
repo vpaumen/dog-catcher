@@ -1,7 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/api/favorites", function(req, res) {
+  app.get("/api/Favorites", function(req, res) {
     var query = {};
     if (req.query.users_id) {
       query.UsersId = req.query.users_id;
@@ -14,24 +14,24 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/favorites/:id", function(req, res) {
-    db.Favorites.findOne({
-      where: {
-        id: req.params.id
-      },
-      include: [db.Users]
-    }).then(function(dbFavorites) {
-      res.json(dbFavorites);
-    });
-  });
+  // app.get("/api/favorites/:id", function(req, res) {
+  //   db.Favorites.findOne({
+  //     where: {
+  //       id: req.params.id
+  //     },
+  //     include: [db.Users]
+  //   }).then(function(dbFavorites) {
+  //     res.json(dbFavorites);
+  //   });
+  // });
 
-  app.post("/api/favorites", function(req, res) {
+  app.post("/api/Favorites", function(req, res) {
     db.Favorites.create(req.body).then(function(dbFavorites) {
       res.json(dbFavorites);
     });
   });
 
-  app.delete("/api/favorites/:id", function(req, res) {
+  app.delete("/api/Favorites/:id", function(req, res) {
     db.Favorites.destroy({
       where: {
         id: req.params.id
@@ -41,7 +41,7 @@ module.exports = function(app) {
     });
   });
 
-  app.put("/api/favorites", function(req, res) {
+  app.put("/api/Favorites", function(req, res) {
     db.Favorites.update(
       req.body,
 

@@ -14,16 +14,16 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/savedSearch/:id", function(req, res) {
-    db.SavedSearch.findOne({
-      where: {
-        id: req.params.id
-      },
-      include: [db.Users]
-    }).then(function(dbSavedSearch) {
-      res.json(dbSavedSearch);
-    });
-  });
+  // app.get("/api/savedSearch/:id", function(req, res) {
+  //   db.SavedSearch.findOne({
+  //     where: {
+  //       id: req.params.id
+  //     },
+  //     include: [db.Users]
+  //   }).then(function(dbSavedSearch) {
+  //     res.json(dbSavedSearch);
+  //   });
+  // });
 
   app.post("/api/savedSearch", function(req, res) {
     db.SavedSearch.create(req.body).then(function(dbSavedSearch) {
