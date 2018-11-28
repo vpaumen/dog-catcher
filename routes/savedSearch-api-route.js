@@ -1,7 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/api/savedSearch", function(req, res) {
+  app.get("/api/SavedSearch", function(req, res) {
     var query = {};
     if (req.query.users_id) {
       query.UsersId = req.query.users_id;
@@ -25,13 +25,13 @@ module.exports = function(app) {
   //   });
   // });
 
-  app.post("/api/savedSearch", function(req, res) {
+  app.post("/api/SavedSearch", function(req, res) {
     db.SavedSearch.create(req.body).then(function(dbSavedSearch) {
       res.json(dbSavedSearch);
     });
   });
 
-  app.delete("/api/savedSearch/:id", function(req, res) {
+  app.delete("/api/SavedSearch/:id", function(req, res) {
     db.SavedSearch.destroy({
       where: {
         id: req.params.id
@@ -41,7 +41,7 @@ module.exports = function(app) {
     });
   });
 
-  app.put("/api/savedSearch", function(req, res) {
+  app.put("/api/SavedSearch", function(req, res) {
     db.SavedSearch.update(
       req.body,
 

@@ -12,18 +12,32 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/users", function(req, res) {
+  app.post("/api/Users", function(req, res) {
     db.Users.create(req.body).then(function(dbUsers) {
       res.json(dbUsers);
     });
   });
 
-  app.delete("/api/users/:id", function(req, res) {
+  app.delete("/api/Users/:id", function(req, res) {
     db.Users.destroy({
       where: {
         id: req.params.id
       }
     }).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+
+  app.put("/api/Users:id", function(req, res) {
+    db.Users.update(
+      req.body,
+
+      {
+        where: {
+          id: req.body.id
+        }
+      }
+    ).then(function(dbUsers) {
       res.json(dbUsers);
     });
   });
