@@ -17,6 +17,16 @@ module.exports = function(app) {
     res.render("results");
   });
 
+  /* app.get("/api/petfinder", function(req, res) {
+    var dbExamples = {
+      name: "Jordan",
+      age: 21
+    };
+
+    console.log("got to apiRoutes!");
+    res.json(dbExamples);
+  }); */
+
   // Load index page
   // app.get("/", function(req, res) {
   //   db.Example.findAll({}).then(function(dbExamples) {

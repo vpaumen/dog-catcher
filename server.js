@@ -23,10 +23,11 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/favorites-api-route.js")(app, db);
-require("./routes/htmlRoutes.js")(app, db);
-require("./routes/savedSearch-api-route.js")(app, db);
-require("./routes/favorites-api-route.js")(app, db);
+require("./routes/test-api.js")(app);
+require("./routes/favorites-api-route.js")(app);
+require("./routes/savedSearch-api-route.js")(app);
+require("./routes/favorites-api-route.js")(app);
+require("./routes/htmlRoutes.js")(app);
 
 var syncOptions = { force: false };
 

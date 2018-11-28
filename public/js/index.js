@@ -49,6 +49,7 @@ function bindButtons(){
         /* var url = 'https://api.petfinder.com/pet.getRandom'; */
         var url = 'https://api.petfinder.com/pet.find';
         /* var url = 'https://api.petfinder.com/breed.list'; */
+
 		
 		// Within $.ajax{...} is where we fill out our query 
 		$.ajax({
@@ -63,7 +64,7 @@ function bindButtons(){
 				sex: sex,
 				'location': zip,
 				age: age,
-                count: 50,
+        count: 3,
 				output: 'basic',
 				format: 'json'
 			},
@@ -159,10 +160,13 @@ function bindButtons(){
 					dog.description = response.petfinder.pets.pet[i].description.$t;
 					dog.email = response.petfinder.pets.pet[i].contact.email.$t;
 					
-					dogs.push(dog);
+          dogs.push(dog);
+          
 				}
 
-				console.log(dogs);
+        console.log(dogs);
+        
+        displayResults();
                 
 				/* var catName = response.petfinder.pet.name.$t;
 				var img = response.petfinder.pet.media.photos.photo[0].$t;
@@ -256,6 +260,30 @@ function getAges() {
 		$("#ages-drop").append(newAge);
 	}
 }
+
+/////////////////////
+/* Populating results list div */
+
+function displayResults() {
+
+  for (var i = 0; i < dogs.length; i++) {
+
+    console.log("i");
+    var resultTile = `<div>
+  
+    <a href="https://www.petfinder.com/petdetail/${dogs[i].id}"<img src="${dogs[i].photo}">
+  
+    <h3>${dogs[i].name}</h3>
+  
+    </div>`;
+         
+    $("#resultsList").append(resultTile);
+  
+  
+  }
+}
+
+
 
 
 

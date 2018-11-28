@@ -113,21 +113,15 @@
     <button type="submit" class="btn btn-primary" id="SubmitZip">Submit</button>
   </div>
   </div>
+    <div class="row">
+      <div id="resultsList">
+
+        
+      </div>
+
+    </div>
   </div>
 
-  {{!-- attempt at adding search results in handlebars --}}
-    <section id="results-container">
-    <div id="results">
-      {{!-- <h2>Your Matches!</h2> --}}
-      {{#each dog}}
-      <div class="dog">
-        <form class="results-form" action="/{{id}}?_method=PUT" method="POST">
-        </form>
-        {{dog_name}} <span>#{{id}}</span>
-      </div>
-      {{/each}}
-    </div>
-    </section>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
