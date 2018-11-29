@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "kGarnett#%1408",
+    "password": "",
     "database": "dogcatcher_db",
     "host": "localhost",
     "dialect": "mysql"

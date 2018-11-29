@@ -115,7 +115,7 @@ function bindButtons(){
 					// Try...Catch for dogs without photos inside media, gracefully handling > Uncaught TypeError: Cannot read property 'photo' of undefined
 					try {
 
-						dog.photo = response.petfinder.pets.pet[i].media.photos.photo[0].$t;
+						dog.photo = response.petfinder.pets.pet[i].media.photos.photo[2].$t;
 					}
 					catch (error) {
 
@@ -269,11 +269,11 @@ function displayResults() {
   for (var i = 0; i < dogs.length; i++) {
 
     console.log("i");
-    var resultTile = `<div>
+    var resultTile = `<div class="tile">
   
-    <a href="https://www.petfinder.com/petdetail/${dogs[i].id}"<img src="${dogs[i].photo}">
+    <a href="https://www.petfinder.com/petdetail/${dogs[i].id}" target="_blank"><img src="${dogs[i].photo}"/></a>
   
-    <h3>${dogs[i].name}</h3>
+    <h3 class="centerImage">${dogs[i].name}</h3>
   
     </div>`;
          
