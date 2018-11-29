@@ -283,7 +283,45 @@ function displayResults() {
   }
 }
 
+document.addEventListener('DOMContentLoaded', submitUser);
 
+function submitUser() {
+
+	var usernameInput = $("#exampleInputUsername1");
+	var emailInput = $("#exampleInputEmail1");
+	var passwordInput = $("#exampleInputPassword1");
+
+
+	document.getElementById('SubmitUser').addEventListener('click', function(event){
+		event.preventDefault();
+    // Wont submit the post if we are missing a body or a title
+    if (!usernameInput.val().trim() || !emailInput.val().trim() || !passwordInput.val()) {
+      return;
+		}
+		
+		var newUser = {
+      username: usernameInput.val().trim(),
+      email: emailInput.val().trim(),
+      password: passwordInput.val()
+    };
+
+		console.log(newUser);
+
+		submitPost(newUser);
+
+
+
+	})
+
+
+  function submitPost(Users) {
+    $.post("/api/Users", Users, function() {
+			console.log("User post successful!");
+			window.location.href = "/";
+    });
+  }
+
+}
 
 
 
