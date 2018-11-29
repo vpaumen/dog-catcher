@@ -34,14 +34,42 @@ h2 {
   color: #28a745;
 }
 
+h3 {
+  color: whitesmoke;
+  font-size: 20px;
+}
+
 h5 {
   color: gray;
+  padding-top: 20px;
 }
 
 h6 {
   color: gray;
   margin-bottom: 2px;
-  margin-top: 20px;
+}
+
+.tile {
+  background-color: rgb(53, 60, 73);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.tile img 
+{
+ max-width: 250px;
+ max-height: 250px;
+}
+
+/* .centerImage {
+  padding: 0 auto;
+} */
+
+img {
+  height: 325px;
+  width: 300px;
+  border-radius: 5px;
+  padding-bottom: 15px;
 }
 
 .fa-paw {
@@ -84,7 +112,8 @@ button:hover {
 }
 
 body {
-  background-color: rgb(53, 60, 73);
+  /* background-color: rgb(53, 60, 73); */
+  background-color: #f6f6f6;
 }
 
 .jumbotron {
@@ -96,7 +125,7 @@ body {
   /* align-content: center; */
   justify-content: left;
   font-family: 'Paytone One', sans-serif;
-  font-size: 120px;
+  font-size: 110px;
   margin-left: 0px;
   color: whitesmoke;
   width: 75%;
