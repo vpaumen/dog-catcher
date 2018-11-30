@@ -283,6 +283,9 @@ function displayResults() {
   }
 }
 
+
+
+// Code for User submit POST
 document.addEventListener('DOMContentLoaded', submitUser);
 
 function submitUser() {
@@ -307,15 +310,15 @@ function submitUser() {
 
 		console.log(newUser);
 
-		submitPost(newUser);
+		submitUser(newUser);
 
 
 
 	})
 
 
-  function submitPost(Users) {
-    $.post("/api/Users", Users, function() {
+  function submitUser(Users) {
+    $.post("/api/users", Users, function() {
 			console.log("User post successful!");
 			window.location.href = "/";
     });
@@ -323,6 +326,52 @@ function submitUser() {
 
 }
 
+
+// Code for SavedSearch submit POST
+document.addEventListener('DOMContentLoaded', saveSearch);
+
+function saveSearch() {
+
+	var zipInput = $("#InputZip");
+	var breedsInput = $("#breeds-drop");
+	var sizesInput = $("#sizes-drop");
+	var sexesInput = $("#sexes-drop");
+	var agesInput = $("#ages-drop");
+
+
+	document.getElementById('SubmitZip').addEventListener('click', function(event){
+		event.preventDefault();
+    // Wont submit the post if we are missing a body or a title
+    if (!zipInput.val().trim()) {
+      return;
+		}
+		
+		var newSearch = {
+      zip: zipInput.val().trim(),
+      breeds: breedsInput.val(),
+			sizes: sizesInput.val(),
+			sexes: sexesInput.val(),
+			ages: agesInput.val(),
+			userId: "aa6f9127-71a6-4d57-a7c5-152b494aaa12"
+    };
+
+		console.log(newSearch);
+
+		submitSearch(newSearch);
+
+
+
+	})
+
+
+  function submitSearch(SavedSearch) {
+    $.post("/api/savedsearch", SavedSearch, function() {
+			console.log("SavedSearch post successful!");
+		/* 	window.location.href = "/"; */
+    });
+  }
+
+}
 
 
 /* KIRSTEN: THIS IS TO TEST API. Changed var names, not sure what we need or will overlap - Kirsten

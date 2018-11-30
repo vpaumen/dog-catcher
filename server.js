@@ -27,6 +27,7 @@ require("./routes/test-api.js")(app);
 require("./routes/favorites-api-route.js")(app);
 require("./routes/savedSearch-api-route.js")(app);
 require("./routes/favorites-api-route.js")(app);
+require("./routes/user-api-route.js")(app);
 require("./routes/htmlRoutes.js")(app);
 
 var syncOptions = { force: false };

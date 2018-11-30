@@ -15,7 +15,7 @@ module.exports = function(app) {
   });
 
   // app.get("/api/savedSearch/:id", function(req, res) {
-  //   db.SavedSearch.findOne({
+  //   db.SavedSearch.findOne({    // .findAll
   //     where: {
   //       id: req.params.id
   //     },
@@ -25,10 +25,26 @@ module.exports = function(app) {
   //   });
   // });
 
-  app.post("/api/SavedSearch", function(req, res) {
+  /* app.post("/api/SavedSearch", function(req, res) {
     db.SavedSearch.create(req.body).then(function(dbSavedSearch) {
       res.json(dbSavedSearch);
     });
+  }); */
+
+  app.post("/api/savedsearch", function(req, res) {
+    console.log(req.body);
+    db.SavedSearch.create(
+     /*  zip: req.body.zip,
+      breeds: req.body.breeds,
+      sizes: req.body.sizes,
+      sexes: req.body.sexes,
+      ages: req.body.ages,
+      userId: req.body.userId */
+      req.body
+      )
+      .then(function(dbUsers) {
+        res.json(dbUsers);
+      });
   });
 
   app.delete("/api/SavedSearch/:id", function(req, res) {

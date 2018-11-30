@@ -18,7 +18,7 @@ module.exports = function(app) {
     });
   }); */
 
-  app.post("/api/Users", function(req, res) {
+  app.post("/api/users", function(req, res) {
     console.log(req.body);
     db.Users.create({
       username: req.body.username,

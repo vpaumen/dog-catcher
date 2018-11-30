@@ -1,10 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
   var SavedSearch = sequelize.define("SavedSearch", {
-    id: {
+    /* id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false
-    },
+    }, */
     dogSex: {
       type: DataTypes.STRING,
       required: false
@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
   SavedSearch.associate = function(models) {
     SavedSearch.belongsTo(models.Users, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };
