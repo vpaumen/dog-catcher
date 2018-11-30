@@ -12,11 +12,24 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/Users", function(req, res) {
+ /*  app.post("/api/Users", function(req, res) {
     db.Users.create(req.body).then(function(dbUsers) {
       res.json(dbUsers);
     });
+  }); */
+
+  app.post("/api/users", function(req, res) {
+    console.log(req.body);
+    db.Users.create({
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password
+    })
+      .then(function(dbUsers) {
+        res.json(dbUsers);
+      });
   });
+
 
   app.delete("/api/Users/:id", function(req, res) {
     db.Users.destroy({
